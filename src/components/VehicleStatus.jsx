@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Gauge, Battery, ThermometerSun, Satellite, SteeringWheel, AlertTriangle } from "lucide-react";
+import { Gauge, Battery, ThermometerSun, Satellite, CircleDot, AlertTriangle } from "lucide-react";
 
 function Progress({ value, color = "bg-red-500" }) {
   return (
@@ -66,7 +66,7 @@ export default function VehicleStatus({ speed, battery, gear, temp, gps, steerin
             </div>
           </div>
           <div className="rounded-lg border border-neutral-800 bg-neutral-900 p-3">
-            <div className="flex items-center gap-2 text-neutral-300 mb-1"><SteeringWheel size={16} className="text-purple-400"/>Steering</div>
+            <div className="flex items-center gap-2 text-neutral-300 mb-1"><CircleDot size={16} className="text-purple-400"/>Steering</div>
             <div className="text-neutral-100 font-medium">{steering.toFixed(0)}°</div>
             <div className="mt-2">
               <Progress value={((steering + 30) / 60) * 100} color="bg-purple-500" />

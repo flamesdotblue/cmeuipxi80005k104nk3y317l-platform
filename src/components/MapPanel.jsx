@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 
 export default function MapPanel({ position, heading, obstacles = [], route = [] }) {
   const carShape = useMemo(() => {
-    // Triangle pointing up at angle 0
     const size = 3.2;
     return `0,${-size} ${size},${size} ${-size},${size}`;
   }, []);
